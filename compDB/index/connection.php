@@ -1,5 +1,5 @@
 <?php
-$link=mysqli_connect('cameroncoleinfo.ipagemysql.com','cameron_cole','we1101lls','flowgaming1');
+$link=mysqli_connect('omitted','omitted','omitted','omitted');
 if (!$link) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
     echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
