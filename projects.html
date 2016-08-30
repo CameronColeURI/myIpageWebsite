@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Projects Directory</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet"
+	href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<style>
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 99999;
+	opacity: 0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.modalDialog>div {
+	width: 400px;
+	height: 250px;
+	position: relative;
+	margin: 10% auto;
+	padding: 10px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+	background: #00d9ff;
+}
+
+.modalList>ul{
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+}
+
+.modalList>li{
+	display: inline;
+	padding: 40px;
+}
+
+.my-icon{
+	display: inline-block;
+	float: left;
+	padding: 15px;
+        line-height: 100px
+}
+</style>
+</head>
+<body>
+<!-- SLiding Menu -->
+<div id="menufix">
+    <nav class="stroke">
+    <ul class="nav">
+<p style="float:left; padding:0px; margin-right:0px; position:relative;"><a href="#" class="back">< To Top</a></p>
+        <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; Home</a></li> 
+		<li><a href="resume.html"><i class="fa fa-book" aria-hidden="true"></i>&nbsp; Resume</a></li>
+		<li><a href="projects.html"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp; Projects</a></li>
+		<li><a href="contact.html"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; Contact</a></li>
+    </ul>
+    </nav>
+</div>
+<div class="container">
+			<div class="header">
+				
+			</div>
+			<div class="nav-bar">
+				<nav class ="stroke">
+<ul class="nav">
+		<li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; Home</a></li> 
+		<li><a href="resume.html"><i class="fa fa-book" aria-hidden="true"></i>&nbsp; Resume</a></li>
+		<li><a href="projects.html"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp; Projects</a></li>
+		<li><a href="contact.html"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; Contact</a></li>
+</ul>
+</nav>
+			</div>
+			<div class="content">
+				<div class="main">
+<h1>Github Link</h1>
+<a href="https://github.com/CameronColeURI">https://github.com/CameronColeURI</a>
+<hr>
+					<h1>Projects</h1>
+					<ul>
+						<li><a href="todo.html">To-Do List</a>
+                                                <li><a href="colorPicker.html">Color Picker</a>
+<li><a href="compDB/index/loginTest.php">Login Form w/ Database</a></li>
+<li><a href="compDB/index/register.php">Register Form w/ Database</a></li>
+<li><a href="#openModal">Modal Test</a></li>
+<li><a href="misc/IndependentProject.pdf"> Online Food Ordering Database Plan</a></li>
+
+
+<div id="openModal" class="modalDialog">
+<div><a href="#close" title="Close" class="close">X</a>
+<h2>Register For Our Blog!</h2>
+	<ul class="modalList">
+	<li><i class="fa fa-align-left fa-5x my-icon" aria-hidden="true"></i></li>
+	<li><form>Name:<br>
+	<input type='text' name="name"> <br>
+	Email Address:<br>
+	<input type='email' name="email"></form>
+	</li>
+	</ul>
+</div>
+</div>
+					</ul>
+				</div>
+			</div>
+		<div class="footer">
+				&copy; Copyright 2016
+		</div>
+</div>
+
+</body>
+<script>
+$(document).ready(function() {
+         $window = $(window);
+    $(window).scroll(function(){
+
+        if($window.scrollTop() > 100)
+            $("#menufix").addClass("active");
+        else    
+            $("#menufix").removeClass("active");
+            
+        if($window.scrollTop() > 300)
+            $("#menufix").addClass("active_more");
+        else    
+            $("#menufix").removeClass("active_more");
+    });
+});
+</script>
+</html>

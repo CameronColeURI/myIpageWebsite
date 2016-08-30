@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Contact Me Page</title>
+<link rel="stylesheet"
+	href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<!-- SLiding Menu -->
+<div id="menufix">
+    <nav class="stroke">
+    <ul class="nav">
+<p style="float:left; padding:0px; margin-right:0px; position:relative;"><a href="#" class="back">< To Top</a></p>
+        <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; Home</a></li> 
+		<li><a href="resume.html"><i class="fa fa-book" aria-hidden="true"></i>&nbsp; Resume</a></li>
+		<li><a href="projects.html"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp; Projects</a></li>
+		<li><a href="contact.html"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; Contact</a></li>
+    </ul>
+    </nav>
+</div>
+<div class="container">
+	<div class="header">
+		
+	</div>
+	<div class="nav-bar">
+		<nav class ="stroke">
+<ul class="nav">
+		<li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; Home</a></li> 
+		<li><a href="resume.html"><i class="fa fa-book" aria-hidden="true"></i>&nbsp; Resume</a></li>
+		<li><a href="projects.html"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp; Projects</a></li>
+		<li><a href="contact.html"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; Contact</a></li>
+</ul>
+</nav>
+	</div>
+	
+	<div class="content">
+		<div class="main">
+			<form  name="contactform" method="post" action="send_form_email.php">
+    		Your name:<br>
+    		<input name="name" type="text" value="" size="30"/><br>
+    		Your email:<br>
+    		<input name="email" type="text" value="" size="30"/><br>
+    		Your message:<br>
+    		<textarea name="message" rows="7" cols="30"></textarea><br>
+    		<input type="submit" value="Submit"/>
+    		</form>
+    	</div>
+	</div>
+<div class="footer">
+				&copy; Copyright 2016
+		</div>
+</div>
+</body>
+<script>
+$(document).ready(function() {
+         $window = $(window);
+    $(window).scroll(function(){
+
+        if($window.scrollTop() > 100)
+            $("#menufix").addClass("active");
+        else    
+            $("#menufix").removeClass("active");
+            
+        if($window.scrollTop() > 300)
+            $("#menufix").addClass("active_more");
+        else    
+            $("#menufix").removeClass("active_more");
+    });
+});
+</script>
+</html>
